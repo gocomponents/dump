@@ -1,2 +1,2 @@
 # dump
-unknown panic log
+unknown panic dump(windows and linux)
