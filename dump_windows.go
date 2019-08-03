@@ -14,6 +14,7 @@ func Dump()  {
 	}
 	fileName := appName + "_" +  time.Now().Format("2006-01-02")
 	logFilename := "c:\\logs\\" + fileName + ".log"
+	os.Mkdir("c:\\logs", os.ModePerm)
 	logFile, _ := os.OpenFile(logFilename, os.O_WRONLY|os.O_CREATE|os.O_SYNC|os.O_APPEND, 0644)
 	redirectStderr(logFile)
 	os.Stderr.Write([]byte("\r\n"+time.Now().Format("2006-01-02 15:04:05") + "\r\n"))
